@@ -1,0 +1,104 @@
+👨‍💻 6. Source Code Review
+🔎 What Is It?
+Source Code Review is the process of analyzing application code for security vulnerabilities, logic flaws, or insecure coding practices. It can be done manually or with automated tools, and it helps catch issues before they make it to production.
+
+It’s like VAPT—but instead of testing the app from the outside, you look directly into its source code.
+
+🎯 Why It’s Important
+Detect insecure functions and business logic flaws.
+
+Find hidden backdoors, hardcoded secrets, and poor crypto.
+
+Uncover vulnerabilities missed by scanners (like insecure authorization).
+
+Prevent data breaches and strengthen SDLC.
+
+🧩 How You Can Offer Source Code Review Services
+🗂️ 1. Scoping & Access
+Start by working with the client to define:
+
+What application(s) to review (web, mobile, APIs, microservices).
+
+What languages/tech stacks are used (Python, JavaScript, Java, PHP, etc.).
+
+How code will be shared (Git repo access, code zip, on-site review).
+
+🧾 Deliverable: Review plan, NDA if required, secure access protocol
+
+🔍 2. Manual and Automated Code Analysis
+✅ Manual Review:
+Analyze code for OWASP Top 10 risks:
+
+Injections (SQL, LDAP, OS)
+
+Broken authentication
+
+Insecure direct object references (IDOR)
+
+Insecure cryptography
+
+Review access control logic, input validation, error handling
+
+Focus on security-sensitive areas: auth flows, payment systems, file uploads
+
+🛠️ Tools: Manual inspection + secure coding checklists
+
+✅ Automated Scanning:
+Run static code analysis (SAST) tools to catch common bugs and insecure patterns.
+
+🛠️ Tools:
+
+SonarQube, Semgrep, Fortify, Checkmarx, Bandit (Python), Brakeman (Ruby), ESLint (JS)
+
+🔐 3. Secrets & Config Review
+Check for hardcoded passwords, API keys, tokens.
+
+Inspect .env, config files, and deployment scripts.
+
+Validate use of environment variables, secure storage practices.
+
+🧾 4. Reporting & Recommendations
+Build a detailed report that includes:
+
+List of vulnerabilities with risk ratings (High, Medium, Low)
+
+Code snippets showing the issue
+
+Recommended secure coding fixes
+
+Links to best practices (e.g., OWASP Cheat Sheets)
+
+🧾 Deliverables:
+
+Secure Code Review Report (PDF/HTML)
+
+Fix recommendation guide
+
+Optional: walkthrough call with developers
+
+🔁 5. Developer Training (Optional)
+Offer follow-up sessions to train the client’s developers:
+
+Secure coding best practices
+
+How to use linters and SAST tools
+
+How to fix common bugs
+
+🔑 Languages You Can Support (examples)
+
+Language	Focus Areas
+JavaScript	XSS, DOM-based issues, insecure APIs
+Java	SQLi, RCE, deserialization, Spring security
+Python	Injections, unsafe eval, insecure deserialization
+PHP	Injections, file includes, session handling
+Go	Input validation, concurrency issues
+C/C++	Memory corruption, buffer overflows
+🧾 Summary of What You Deliver
+
+Phase	Deliverable
+Scoping	NDA + Source Code Review Plan
+Review (Manual + Auto)	Vulnerability list, annotated code issues
+Config & Secrets Check	Secrets report, storage findings
+Final Report	Full Review Report + Fix Recommendations
+Optional Training	Developer workshop or 1:1 fix support
