@@ -1,0 +1,82 @@
+🔐 2. Vulnerability Assessment & Penetration Testing (VAPT)
+🔍 1. Scoping & Planning
+Before testing, meet with the client to define:
+
+What is in-scope (networks, apps, cloud, APIs, IoT, etc.).
+
+Whether testing is black-box, grey-box, or white-box.
+
+Test schedule (to avoid business disruption).
+
+Obtain proper authorization in writing (very important!).
+
+🧾 Deliverable: Signed scope of work + testing agreement.
+
+🔦 2. Vulnerability Assessment (VA)
+This part identifies known vulnerabilities in the environment.
+
+✅ What You Do:
+Run automated vulnerability scans on:
+
+Networks (internal and external)
+
+Web apps
+
+Endpoints
+
+Databases
+
+Look for outdated software, missing patches, misconfigurations, etc.
+
+🛠️ Tools:
+
+Nessus, OpenVAS, Qualys, Burp Suite (for web apps)
+
+Nikto, Nmap, and custom scripts
+
+🧾 Deliverable: A list of identified vulnerabilities with severity levels (Low–Critical).
+
+🎯 3. Penetration Testing (PT)
+Here, you actively exploit vulnerabilities (ethically) to simulate real-world attacks.
+
+✅ What You Do:
+Try to access unauthorized systems or data.
+
+Test firewall bypass, privilege escalation, password cracking, etc.
+
+Perform lateral movement once inside a system.
+
+🛠️ Tools:
+
+Metasploit, Burp Suite Pro, Hydra, John the Ripper, SQLmap
+
+Manual testing for logic flaws and privilege escalation
+
+🧾 Deliverable: Documented proof-of-concepts (PoCs) showing how vulnerabilities were exploited.
+
+🧾 4. Reporting & Recommendations
+Create a comprehensive VAPT Report that includes:
+
+Executive summary (for non-technical stakeholders)
+
+Technical details (CVEs, screenshots, exploitation steps)
+
+Risk ratings (CVSS scores)
+
+Remediation guidance for each finding
+
+🧾 Deliverables:
+
+Final VAPT report (PDF or doc)
+
+Remediation roadmap (prioritized list)
+
+Option for a retesting session after fixes
+
+🤝 5. Post-Engagement Support
+Help the client understand and fix issues.
+
+Offer retesting to verify if vulnerabilities are resolved.
+
+Optionally propose ongoing managed security or quarterly VAPT.
+
