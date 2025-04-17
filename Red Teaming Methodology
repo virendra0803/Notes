@@ -1,0 +1,109 @@
+🛡️ 5. Red Teaming
+🔥 What Is Red Teaming?
+Red Teaming is a full-scope, simulated cyberattack designed to test how well an organization can detect, respond to, and defend against real-world threats. Unlike traditional penetration testing (which is often technical and short-term), red teaming is more strategic and stealthy—mimicking actual adversaries.
+
+Think of the red team as the "ethical attackers" trying to break in, while the blue team (the client's security) tries to stop them.
+
+🧠 Purpose of Red Teaming
+Test detection and response, not just vulnerabilities.
+
+Simulate Advanced Persistent Threats (APTs)—like real-world hackers.
+
+Go beyond tools and test people, processes, and technology.
+
+🧩 How You Can Offer Red Teaming Services
+🚩 1. Scoping & Planning
+Start with defining:
+
+The goals (e.g., test SOC effectiveness, bypass MFA, reach crown jewels).
+
+Rules of Engagement (ROE): What’s off-limits? Are blue teams aware?
+
+Testing window and stealth level (noisy or covert?).
+
+🧾 Deliverable: Red Team Plan & ROE document
+
+🧨 2. Reconnaissance (OSINT)
+Gather intel on the target—like a real hacker would.
+
+✅ You Collect:
+Employee names (LinkedIn, social media)
+
+Email formats (for phishing)
+
+Subdomains, IP ranges, leaked credentials
+
+Technologies in use (CMS, VPNs, cloud providers)
+
+🛠️ Tools: Maltego, Recon-ng, Google Dorks, Shodan
+
+🕵️‍♂️ 3. Initial Access & Exploitation
+Try to gain access through:
+
+Phishing campaigns (custom-crafted emails)
+
+Exploiting vulnerable web apps
+
+Credential stuffing or password spraying
+
+Dropping payloads (via USB drops or malicious documents)
+
+🛠️ Tools: Cobalt Strike, Gophish, Metasploit, Evilginx, custom scripts
+
+📡 4. Post-Exploitation & Lateral Movement
+Once inside, act like an attacker would:
+
+Dump credentials (Mimikatz)
+
+Escalate privileges
+
+Move laterally through the network
+
+Try to access "crown jewels" (e.g., databases, internal systems)
+
+🛠️ Tools: BloodHound, Empire, Rubeus, SharpHound
+
+🔐 5. Evasion & Persistence
+Test the client’s detection capabilities:
+
+Use obfuscated payloads
+
+Evade EDR/AV tools
+
+Establish persistence (e.g., startup scripts, scheduled tasks)
+
+📝 6. Reporting & Debrief
+Give a full breakdown of:
+
+How you got in
+
+What you accessed
+
+Which defenses failed or succeeded
+
+Gaps in detection, response, or escalation
+
+🧾 Deliverable: Red Team Report + attack chain diagram + risk scoring + recommendations
+
+🔁 Optional: Conduct a blue team debrief (purple team mode), to improve defenses.
+
+🔄 7. Purple Team Engagement (Optional)
+Work alongside the client’s security team to improve detection and response in real time—turning red team findings into learning moments.
+
+🧾 Summary of Red Teaming Engagement Deliverables
+
+Phase	Deliverable
+Planning & Scoping	Red Team Plan + ROE document
+Recon & Access	Recon report + phishing or exploit PoC
+Post-Exploitation	Attack path documentation
+Reporting	Final Red Team Report + diagrams
+Debrief	Presentation + recommendations
+🧠 Who Needs Red Teaming?
+Enterprises with mature security teams (SOC, SIEM, EDR).
+
+Organizations that want to test real-world readiness.
+
+Regulated industries (finance, defense, healthcare).
+
+Critical infrastructure providers.
+
